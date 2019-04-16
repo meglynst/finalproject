@@ -1,0 +1,337 @@
+body{
+	margin-top:-17px;
+    background-color:#DCDCDC;
+    font-family:"Advent Pro";
+    color:#000000;
+}
+
+/*HEADER*/
+a.skip-content{
+	background-color:#4B0082; 
+	padding:10px;
+	text-decoration: none;
+	position:relative;
+    top:-80px;
+    z-index:1;
+/*    transition: top ease-in 1s;*/
+}
+a.skip-content:focus{
+	background:#4B0082;
+	color:#FFFFFF;
+	top: 30px;
+	border: 1px #808080;
+}
+
+header{
+	background-color:#000000;
+	color:#FFFFFF;
+	font-family:"Advent Pro";
+	text-align:center;
+	z-index:2;
+}
+header a{
+	color:#FFFFFF;
+	text-decoration: none; /*gets rid of line under links*/
+	border:5px #000000;
+	margin:10px;
+}
+header li{
+	display:inline;
+}
+header nav a{
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+header nav a:hover{
+  background-color:#7B68EE;
+  color:#FFFFFF;
+}
+@media screen and (min-width : 320px) {
+	.header-home h1{
+		font-size:2em;
+		font-weight:bold;
+		letter-spacing:10px; 
+		padding:20px;
+		background-image:url("../image/header_background.jpg"); 	
+	}
+	header nav{
+		background-color:#000000;
+	}
+	.header-home #myNav{
+		display:none;
+		font-size:16px;
+	}
+		/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+	.sticky {
+  		position: fixed;
+  		top: 0;
+  		width: 100%;
+  		left:0px;
+	}
+}
+@media screen and (min-width:680px){
+	.header-home h1{
+		font-size: 4em; 
+	}
+	header nav{
+		background-image:url("../image/header_background.jpg");
+	}
+	#myNav{
+		display:inline-block;
+		font-size:20px;
+		width:100%;
+	}
+	.header-home #myNav{
+		display:inline-block;
+	}
+	#hamburger-icon {
+		display:none;
+	}
+}
+@media screen and (min-width:1024px){
+	.header-home h1{
+		display:flex;
+		align-items: center; 
+		padding:30px 0px 5px 70px;
+	}
+}
+.current{
+	text-transform: uppercase;
+	background-color:#FFFFFF;
+	color:#000000;
+	font-weight:bold;
+}
+
+
+/*MAIN*/
+main{
+	min-height:80vh;
+}
+main h1{
+	text-align: center;
+	padding:5%;
+	font-size:3.5em; 
+}
+.hp-content{
+	background-color:#FFFFFF;
+}
+/*.title-img{
+	background-color: yellow;
+}*/
+@media screen and (min-width:320px){
+	main h1{
+		margin-top: 50px;
+		padding:5%;
+		font-size:3.5em; 
+		letter-spacing:10px; 
+	}
+	.list-content{
+		padding:40px;
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+		flex-wrap: wrap;
+		font-size:22px;
+	}
+	.hp-content{
+		padding:5px;
+		margin:10px;
+	}
+	.hp-content img{
+		height:350px;
+		width:350px;
+	}
+}
+@media screen and (min-width:680px){
+	main h1{
+		margin-top:25px;
+	}
+}
+
+
+/*REVIEW*/
+@media screen and (min-width:320px){
+	.review{
+		background-color:#FFFFFF;
+		margin-top:150px;
+		margin-left:10%;
+		margin-right:10%;
+		margin-bottom:25px; 
+	}
+	main .review-title h1{
+		font-size:24px;
+	}
+	.review-title{
+		text-align:center;
+		font-size:36px;
+	}
+	.review-title h4{
+		font-size:20px;
+	}
+
+	.flip-card {
+	  	width: 350px;
+	  	height: 350px;
+	  	margin-top:20px;
+	  	padding:8%;
+	}
+
+	.flip-card-inner {
+	  	position: relative;
+	  	width: 100%;
+	  	height: 100%;
+	  	text-align: center;
+	  	transition: transform 0.6s;
+	  	transform-style: preserve-3d;
+	  	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	}
+
+	.flip-card-inner img {
+		height:auto;
+		width:100%;
+	}
+
+	.flip-card:active .flip-card-inner {
+	  	transform: rotateY(180deg);
+	}
+
+	.flip-card-front, .flip-card-back {
+	  	position: absolute;
+	  	width: 100%;
+	  	height: 100%;
+	  	backface-visibility: hidden;
+	}
+
+	.flip-card-front {
+	  	background-color: #bbb;
+	  	color: black;
+	  	z-index: 3;
+	}
+
+	.flip-card-back {
+	  	background-color: #000000;
+	  	color: white;
+	  	transform: rotateY(180deg);
+	  	z-index: 1;
+	}
+	.flip-card-back li {
+		display:block;
+		text-align:left;
+		padding:10px;
+		font-size:24px;
+	}
+
+	.review-content{
+		font-family:"Verdana",sans-serif; 
+		font-size:15px;
+		line-height:1.5;
+		margin:10px;
+		text-align:left;
+	}
+	.review-content p{
+		margin:20px;
+	}
+	.update{
+		font-weight:bold;
+		font-size:24px;  
+	}
+	.review-content iframe{
+		height:300px;
+		width:95%;
+		margin-left:2.5%;
+		padding-bottom:25px; 
+	}
+}
+
+@media screen and (min-width:1024px){
+/*	.title-img{
+		background-color:yellow;
+		width:100%;
+		display:flex;
+		flex-wrap:wrap;
+	}*/
+	.review-title{
+		width:35%;
+		text-align:left;
+	}
+	.flip-card{
+		display:inline-block;
+	}
+	.flip-card:hover .flip-card-inner {
+	  	transform: rotateY(180deg);
+	}
+	.review-content iframe{
+		height:500px;
+	}
+}
+
+/*ABOUT*/
+.about{
+	margin:25px 300px;
+	background-color:#FFFFFF;
+}
+.about ul{
+	list-style-type:none;
+}
+.about a{
+	font-size:24px  
+}
+
+
+/*FOOTER*/
+footer{
+
+	padding:5px;
+	display:block;
+	background-color:#4B0082;
+	text-align:center;
+	color:#FFFFFF;
+	background-image: url("../image/header_background.jpg");
+}
+footer a{
+	color:#FFFFFF;
+	text-decoration:none
+}
+footer nav a:hover{
+  	background-color:#000000;
+}
+.top-symb:focus{
+	height:40%;
+	display:flex;
+	justify-content:flex-end;
+	margin-right: 10px;
+	margin-top:5px;
+	font-size:3em;
+	color:#7B68EE;
+}
+.footer-info{
+	display:inline-block;
+	list-style-type:none;
+	padding:24px;
+}
+.footer-info a:hover{
+	background-color:#7B68EE;
+}
+footer a{
+	padding:5px;
+	color:#FFFFFF;
+	display:inline-block;
+	font-size:24px;
+}
+footer li{
+	display:inline;
+}
+.footer-nav li{
+	margin-right:10px;
+	margin-left:10px;
+	display:inline;
+}
+.copyright{
+	display:flex;
+	align-items: flex-end;
+	margin-top:50px;
+}
