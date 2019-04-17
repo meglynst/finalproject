@@ -27,7 +27,6 @@ header{
 	color:#FFFFFF;
 	font-family:"Advent Pro";
 	text-align:center;
-	z-index:2;
 }
 header a{
 	color:#FFFFFF;
@@ -119,9 +118,6 @@ main h1{
 .hp-content{
 	background-color:#FFFFFF;
 }
-/*.title-img{
-	background-color: yellow;
-}*/
 @media screen and (min-width:320px){
 	main h1{
 		margin-top: 50px;
@@ -153,13 +149,138 @@ main h1{
 }
 
 
+/* BEST OF*/
+@media screen and (min-width:320px){
+	.best-of h1{
+		padding:5px;
+	}
+	.best-of h2{
+		text-align:center;
+		padding-bottom:35px; 
+		font-size:36px; 
+	}
+	.carouselbox {
+	  font-family: "Verdana",sans-serif;
+	  font-size: 14px;
+	  width: 95%;
+	  position: relative;
+	  margin: auto;
+	  margin-bottom: 50px;
+	  overflow: hidden;
+	}
+	.content ol {
+	  margin: 0;
+	  padding: 0;
+	}
+	.content li {
+	  font-size: 16px;
+	  margin: 0;
+	  padding: 0;
+	  width: 100%;
+	  list-style: none;
+	  text-align: center;
+	  z-index: 2;
+	}
+	.content h3{
+		background-color:#FFFFFF; 
+		font-size:36px;
+		margin: 20px;
+		font-family: "Advent Pro";
+		text-align:left;
+	}
+	.content p{
+		margin: 20px;
+		text-align:left;
+		font-size:18px;
+		line-height:1.5;
+	}
+
+
+	.active {
+	  	height: 850px;
+	}
+	.carouselbox button {
+	  	border: none;
+	  	visibility: hidden;
+	}
+	.active button {
+	  	visibility: visible;
+	} 
+	.offscreen {
+	  	position: absolute;
+	  	left: -2000px;
+	}
+
+	.active .buttons {
+	 	padding: 5px 0;
+	  	background: #000000;
+	  	text-align: center;
+	  	z-index: 10;
+	  	position: relative;
+	}
+	.active li a {
+	  	color: #369;
+	  	text-decoration: none;
+	}
+	.active li {
+	  	position: absolute;
+	  	top: 28px;
+	  	opacity: 0;
+	  	transform: scale(0);
+	  	transition: 1s;
+	}
+	.active li.current-box {
+	  	top: 28px;
+	  	background:#FFFFFF;
+	  	pointer-events: auto;
+	  	opacity: 1;
+	  	transform: scale(1);
+	  	transition: 1s;
+	}
+	.content iframe{
+		background-color:#FFFFFF;
+		height:200px;
+		width:95%;
+	}
+}
+@media screen and (min-width:680px){
+	.best-of h1{
+		padding:5px;
+		padding-top:50px; 
+	}
+	.best-of h2{
+		text-align:center;
+		padding-bottom:75px; 
+		font-size:36px; 
+	}
+	.carouselbox{
+		width:85%;
+	}
+	.content iframe{
+		height:400px;
+	}
+	.content p{
+		font-size: 16px;
+	}
+}
+@media screen and (min-width:1024px){
+	.carouselbox{
+		width:70%;
+	}
+	.content iframe{
+		height:500px;
+	}
+}	
+
+
 /*REVIEW*/
 @media screen and (min-width:320px){
 	.review{
 		background-color:#FFFFFF;
 		margin-top:150px;
-		margin-left:10%;
-		margin-right:10%;
+		width:95%;
+		margin-left:2.5%;
+/*		margin-right:10%;*/
 		margin-bottom:25px; 
 	}
 	main .review-title h1{
@@ -169,7 +290,7 @@ main h1{
 		text-align:center;
 		font-size:36px;
 	}
-	.review-title h4{
+	.review-title{
 		font-size:20px;
 	}
 
@@ -192,7 +313,7 @@ main h1{
 
 	.flip-card-inner img {
 		height:auto;
-		width:100%;
+		width:350px;
 	}
 
 	.flip-card:active .flip-card-inner {
@@ -209,14 +330,14 @@ main h1{
 	.flip-card-front {
 	  	background-color: #bbb;
 	  	color: black;
-	  	z-index: 3;
+/*	  	z-index: 3;*/
 	}
 
 	.flip-card-back {
 	  	background-color: #000000;
 	  	color: white;
 	  	transform: rotateY(180deg);
-	  	z-index: 1;
+/*	  	z-index: 1;*/
 	}
 	.flip-card-back li {
 		display:block;
@@ -227,7 +348,7 @@ main h1{
 
 	.review-content{
 		font-family:"Verdana",sans-serif; 
-		font-size:15px;
+		font-size:18px;
 		line-height:1.5;
 		margin:10px;
 		text-align:left;
@@ -248,14 +369,9 @@ main h1{
 }
 
 @media screen and (min-width:1024px){
-/*	.title-img{
-		background-color:yellow;
-		width:100%;
-		display:flex;
-		flex-wrap:wrap;
-	}*/
 	.review-title{
 		width:35%;
+		display:inline-block;
 		text-align:left;
 	}
 	.flip-card{
@@ -299,7 +415,7 @@ footer a{
 footer nav a:hover{
   	background-color:#000000;
 }
-.top-symb:focus{
+.top-symb{
 	height:40%;
 	display:flex;
 	justify-content:flex-end;
