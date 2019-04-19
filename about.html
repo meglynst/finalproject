@@ -12,13 +12,17 @@
 </head>
 <body>
 <a class="skip-content" href="#content">Skip to main content</a>
-<header class = "header-not-home">
-	<nav class = "nav-not-home">
+<header class = "header-not-home" id = "top" tabindex="0">
+	<h1>
+		<a href = "index.html">◃Lucid Pop</a>
+		<span onclick="hamburgerNav()" id = "hamburger-icon">&#9776;</span>
+	</h1>
+	<nav id = "myNav">
 		<ul>
 			<li><a href = "index.html">Home</a></li>
 			<li><a href = "album.html">Album</a></li>
 			<li><a href = "ep.html">EP</a></li>
-			<li><a href = "single.html" class = "current">Single</a></li>
+			<li><a href = "single.html">Single</a></li>
 			<li><a href = "live.html">Live</a></li>
 			<li><a href = "bestof.html">Best of</a></li>
 			<li><a href = "playlist.html">Playlist</a></li>
@@ -30,13 +34,22 @@
 
 <h1>◃About▹</h1>
 <div class = "about">
-	<p>
-	LucidPop Reviews is a place to discuss and share all of our favorite media products from the mainstream, the international, and the everyday artist. If you have any questions or suggestions, please let me know.
-<ul>
-	<li><a href = "contact.html">Contact Me</a></li>
-	<li><a href = "https://soundcloud.com/zikminor" target = "_blank" aria-label = "Link to Soundcloud"><i class="fab fa-soundcloud"></i></a></li>
-</ul>
-</p>
+	<button class="accordion">About LucidPop</button>
+	<div class="panel">
+  		<p>LucidPop Reviews is a place to discuss and share all of our favorite media products from the mainstream, the international, and the everyday artist. If you have any questions or suggestions, please let me know.</p>
+	</div>
+
+	<button class="accordion">Social Media</button>
+	<div class="panel">
+  		<p><a href = "https://soundcloud.com/zikminor" target = "_blank" aria-label = "Link to Soundcloud"><i class="fab fa-soundcloud"></i></a></p>
+	</div>
+
+	<button class="accordion">Contact</button>
+	<div class="panel">
+ 		<p>Email me!</p>
+ 		<p>zikminor@gmail.com</p>
+	</div>
+
 </div>
 </main>
 
@@ -59,6 +72,6 @@
 
 	<section class = "copyright">&copy; Lucid Pop</section>
 </footer>
-
+<script type="text/javascript" src = "style.js"></script>
 </body>
 </html>

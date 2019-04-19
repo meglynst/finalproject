@@ -57,6 +57,13 @@ header nav a:hover{
 		padding:20px;
 		background-image:url("../image/header_background.jpg"); 	
 	}
+	.header-not-home h1{
+		font-size:2em;
+		font-weight:bold;
+		letter-spacing:10px; 
+		padding:20px;
+		background-image:url("../image/header_background.jpg"); 	
+	}
 	header nav{
 		background-color:#000000;
 	}
@@ -64,7 +71,14 @@ header nav a:hover{
 		display:none;
 		font-size:16px;
 	}
-		/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+	.header-not-home #myNav{
+		display:none;
+		font-size:16px;
+	}
+	#hamburger-icon{
+		float:right;
+	}
+	/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 	.sticky {
   		position: fixed;
   		top: 0;
@@ -87,7 +101,13 @@ header nav a:hover{
 	.header-home #myNav{
 		display:inline-block;
 	}
+	.header-not-home #myNav{
+		display:inline-block;
+	}
 	#hamburger-icon {
+		display:none;
+	}
+	.header-not-home h1{
 		display:none;
 	}
 }
@@ -118,6 +138,7 @@ main h1{
 .hp-content{
 	background-color:#FFFFFF;
 }
+
 @media screen and (min-width:320px){
 	main h1{
 		margin-top: 50px;
@@ -125,6 +146,66 @@ main h1{
 		font-size:3.5em; 
 		letter-spacing:10px; 
 	}
+	/* IMPORTANT ANNOUNCEMENT */
+/*	#modalBtn{
+		background-color:#800000;
+		font-family:"Advent Pro"; 
+		color:#FFFFFF;
+		width:85%;
+		height:75px;
+		margin-left:7.5%;
+		margin-top:50px;
+		border:3px solid #000000;
+		font-size:36px;
+		font-weight:bold; 
+	}
+	/*makes background darker*/
+/*	.modal {
+	  display: none; 
+	  position: fixed;
+	  z-index: 1;
+	  left: 0;
+	  top: 0;
+	  width: 100%; 
+	  height: 100%; 
+	  overflow: auto;
+	  background-color: rgb(0,0,0);
+	  background-color: rgba(0,0,0,0.4);
+	}
+	.modal-content {
+		background-color: #FFFFFF;
+	  	margin: 15% auto;
+	  	padding:0;
+	  	width: 80%;
+	  	height:auto;
+	}
+	.close {
+	  color: #000000;
+	  float: right;
+	  font-size: 44px;
+	  font-weight: bold;
+	}
+	.close:hover,
+	.close:focus {
+	  cursor: pointer;
+	}
+	.modal-header {
+	  padding: 2px 16px;
+	  height:45px;
+	  background-color: #FFD700;
+	  font-size:30px;
+	}
+	.modal-header h2{
+		padding: 5px;
+	}
+	.modal-body {
+		font-size:30px;
+		font-family:"Verdana",sans-serif;
+		text-align:left;
+		padding:2.5%;
+		line-height: 1.5;
+	}*/
+
 	.list-content{
 		padding:40px;
 		display:flex;
@@ -140,12 +221,21 @@ main h1{
 	.hp-content img{
 		height:350px;
 		width:350px;
+		border:1px solid #C0C0C0;
 	}
 }
 @media screen and (min-width:680px){
 	main h1{
 		margin-top:25px;
 	}
+/*	#modalBtn {
+		width:60%;
+		margin-left:20%;
+	}
+	.modal-content{
+		width:50%;
+		height:auto;
+	}*/
 }
 
 
@@ -280,25 +370,24 @@ main h1{
 		margin-top:150px;
 		width:95%;
 		margin-left:2.5%;
-/*		margin-right:10%;*/
+		margin-right:10%;
 		margin-bottom:25px; 
-	}
-	main .review-title h1{
-		font-size:24px;
 	}
 	.review-title{
 		text-align:center;
-		font-size:36px;
 	}
-	.review-title{
-		font-size:20px;
+	.review-title h1{
+		letter-spacing:0px;
+	}
+	.review-title h2{
+		font-size:24px; 
 	}
 
 	.flip-card {
 	  	width: 350px;
 	  	height: 350px;
 	  	margin-top:20px;
-/*	  	padding:8%;*/
+	  	margin-left:14%;
 	}
 
 	.flip-card-inner {
@@ -337,7 +426,7 @@ main h1{
 	  	background-color: #000000;
 	  	color: white;
 	  	transform: rotateY(180deg);
-/*	  	z-index: 1;*/
+		margin:auto;
 	}
 	.flip-card-back li {
 		display:block;
@@ -347,11 +436,16 @@ main h1{
 	}
 
 	.review-content{
-		font-family:"Verdana",sans-serif; 
+		font-family:"Arial",sans-serif; 
 		font-size:18px;
 		line-height:1.5;
 		margin:10px;
 		text-align:left;
+	}
+	.review-content h3{
+		margin:20px;
+		margin-top:30px;
+		font-size:14px;
 	}
 	.review-content p{
 		margin:20px;
@@ -367,15 +461,36 @@ main h1{
 		padding-bottom:25px; 
 	}
 }
-
+@media screen and (min-width:680px){
+	.flip-card{
+		margin-left:30%;
+	}
+}
 @media screen and (min-width:1024px){
+	.review {
+		width:80%;
+		margin-left:10%;
+	}
 	.review-title{
-		width:35%;
+/*		background-color: yellow;*/
+		width:50%;
 		display:inline-block;
 		text-align:left;
+		padding-top:100px;
+		padding-left:100px;
+		font-size:24px;
+	}
+	.review-title h1{
+		text-align:left;
+		margin-left:-50px;
+	}
+	.review-content{
+		margin-top:130px;
 	}
 	.flip-card{
 		display:inline-block;
+		float:left;
+		margin-left:2%;
 	}
 	.flip-card:hover .flip-card-inner {
 	  	transform: rotateY(180deg);
@@ -386,17 +501,63 @@ main h1{
 }
 
 /*ABOUT*/
-.about{
-	margin:25px 300px;
-	background-color:#FFFFFF;
-}
-.about ul{
-	list-style-type:none;
-}
-.about a{
-	font-size:24px  
-}
+	.about{
+		margin:25px 20px;
+		background-color:#FFFFFF;
+	}
+	.about ul{
+		list-style-type:none;
+	}
+	.about a{
+		font-size:24px  
+	}
+	.accordion {
+		background-color: #FFFFFF;
+		color: #000000;
+		font-family: "Advent Pro";
+		font-weight: bold;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		height:50%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 36px;
+		transition: 0.4s;
+	}
 
+	.active, .accordion:hover {
+	  background-color: #7B68EE; 
+	}
+	.panel {
+	  	padding: 20px;
+	  	display: none;
+	  	font-family:"Arial",sans-serif;
+	 	background-color: white;
+	  	overflow: hidden;
+	}
+	.accordion:after {
+	  	content: '\00bb';
+	  	font-size: 36px;
+	  	color: #000000;
+	  	float: right;
+	 	margin-left: 5px;
+	}
+	.active:after {
+	  	content: "\2796";		
+	}
+
+@media screen and (min-width:680px){
+	.about{
+		margin:25px 100px;
+	}
+}
+@media screen and (min-width:1024px){
+	.about{
+		margin:25px 250px;
+	}
+}
 
 /*FOOTER*/
 footer{

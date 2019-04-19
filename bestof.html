@@ -12,8 +12,12 @@
 </head>
 <body>
 <a class="skip-content" href="#content">Skip to main content</a>
-<header class = "header-not-home">
-	<nav class = "nav-not-home">
+<header class = "header-not-home" id = "top" tabindex="0">
+	<h1>
+		<a href = "index.html">◃Lucid Pop</a>
+		<span onclick="hamburgerNav()" id = "hamburger-icon">&#9776;</span>
+	</h1>
+	<nav id = "myNav">
 		<ul>
 			<li><a href = "index.html">Home</a></li>
 			<li><a href = "album.html">Album</a></li>
@@ -60,6 +64,6 @@
 
 	<section class = "copyright">&copy; Lucid Pop</section>
 </footer>
-
+<script type="text/javascript" src = "style.js"></script>
 </body>
 </html>
