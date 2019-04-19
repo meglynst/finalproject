@@ -23,11 +23,6 @@ body{
   background: #FFD700;
   font-weight: bold;
 }
-svg{
-	width:20px;
-	height:20px;
-	margin-top:3px;
-}
 .hide-broadcast-target {
     width: 24px;
     height: 24px;
@@ -35,7 +30,6 @@ svg{
     border-radius: 50%;
     padding: 4px;
     transition: all ease .3s;
-}
 }
 a.skip-content{
 	background-color:#4B0082; 
@@ -52,7 +46,6 @@ a.skip-content:focus{
 	top: 30px;
 	border: 1px #808080;
 }
-
 header{
 	background-color:#000000;
 	color:#FFFFFF;
