@@ -301,26 +301,26 @@ main h1{
 		font-size:36px; 
 	}
 	.carouselbox {
-	  font-family: "Verdana",sans-serif;
-	  font-size: 14px;
-	  width: 95%;
-	  position: relative;
-	  margin: auto;
-	  margin-bottom: 50px;
-	  overflow: hidden;
+	 	font-family: "Verdana",sans-serif;
+	  	font-size: 14px;
+	  	width: 95%;
+	  	position: relative;
+	  	margin: auto;
+	  	margin-bottom: 50px;
+	  	overflow: hidden;
 	}
 	.content ol {
-	  margin: 0;
-	  padding: 0;
+	  	margin: 0;
+	  	padding: 0;
 	}
 	.content li {
-	  font-size: 16px;
-	  margin: 0;
-	  padding: 0;
-	  width: 100%;
-	  list-style: none;
-	  text-align: center;
-	  z-index: 2;
+	  	font-size: 16px;
+	  	margin: 0;
+	  	padding: 0;
+	  	width: 100%;
+	 	list-style: none;
+	  	text-align: center;
+	  	z-index: 2;
 	}
 	.content h3{
 		background-color:#FFFFFF; 
