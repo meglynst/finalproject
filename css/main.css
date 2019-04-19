@@ -467,8 +467,6 @@ main h1{
 
 	.flip-card-front {
 	  	background-color: #000000;
-/*	  	color: black;*/
-/*	  	z-index: 3;*/
 	}
 
 	.flip-card-back {
@@ -576,8 +574,8 @@ main h1{
 		transition: 0.4s;
 	}
 
-	.active, .accordion:hover {
-	  background-color: #7B68EE; 
+	.accordion:hover {
+	  	background-color: #7B68EE; 
 	}
 	.panel {
 	  	padding: 20px;
