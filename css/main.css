@@ -466,8 +466,8 @@ main h1{
 	}
 
 	.flip-card-front {
-	  	background-color: #bbb;
-	  	color: black;
+	  	background-color: #000000;
+/*	  	color: black;*/
 /*	  	z-index: 3;*/
 	}
 
